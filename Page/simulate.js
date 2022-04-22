@@ -135,10 +135,10 @@ function optimal() {
 
   for (var i = 0; i < no_of_pages; i++)
     pages[i] = parseInt(pages[i]);
+
     var template = document.createElement('div');
-    template.innerHTML = "<br><br><br>Here is how the frames are going to be filled. NOTE: -1 represents an unallocated frame <br><br>";
-    template.style.textAlign = "center";
-    document.body.appendChild(template);
+    var str = "<br><br><br>Here is how the frames are going to be filled. NOTE: -1 represents an unallocated frame <br><br>";
+  
   for (var i = 0; i < no_of_pages; i++) {
     flag1 = flag2 = 0;
 
@@ -198,13 +198,10 @@ function optimal() {
       faults++;
 
     }
-    let template = document.createElement('div');
-    template.innerHTML = frames + "<br>";
-    template.style.textAlign = "center";
-    document.body.appendChild(template);
+    str += frames + "<br>";
   }
-  let template = document.createElement('div');
-  template.innerHTML = "<br>Page faults = " + faults;
+  str += "<br>Page faults = " + faults;
+  template.innerHTML = str;
   template.style.textAlign = "center";
   document.body.appendChild(template);
 }
