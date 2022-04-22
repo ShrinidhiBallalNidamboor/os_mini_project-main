@@ -75,15 +75,15 @@
               <label class="col-form-label" for="inputDefault">Main Memory:</label>
               <input type="text" class="size form-control" id="csize" placeholder="Enter cache size i.e the number of frames" />
             </div>
-            <input type="button" value="Submit" onclick="myfunction()" style="background-color:#52BE80 " />
+            <input type="button" class="btn btn-primary" value="Submit" onclick="myfunction()" style="background-color:#1de9b6; margin-top: 45px; margin-left: 50px; "/>
           </form>
         </div>
     </div>
   </div>
   <div>
-    <button class="button btn-danger button1" onclick="fifo()">FIFO(First In First Out)</button>
-    <button class="button btn-primary button2" onclick="lru()">LRU(Least Recently Used)</button>
-    <button class="button btn-info button3" onclick="optimal()">Optimal</button>
+    <button class=" button1 btn btn-primary" onclick="fifo()">FIFO(First In First Out)</button>
+    <button class="button2 btn btn-primary" onclick="lru()">LRU(Least Recently Used)</button>
+    <button class="button3 btn btn-primary" onclick="optimal()">Optimal</button>
   </div>
   <script src=simulate.js></script>
 </body>

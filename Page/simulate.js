@@ -26,7 +26,8 @@ function fifo() {
     pages[i] = parseInt(pages[i]);
 
   var j = 0;
-  document.write("Here is how the frames are going to be filled. NOTE: -1 represents an unallocated frame <br><br>");
+  var template = document.createElement('div');
+    var str = "<br><br><br>Here is how the frames are going to be filled. NOTE: -1 represents an unallocated frame <br><br>";
   for (var i = 0; i < no_of_pages; i++) {
     avail = 0;
 
@@ -41,9 +42,13 @@ function fifo() {
       count++;
     }
 
-    document.write(frames + "<br>");
+    str += frames + "<br>";
   }
-  document.write("<br>Page faults = " + count);
+  
+  str += "<br>Page faults = " + count;
+  template.innerHTML = str;
+  template.style.textAlign = "center";
+  document.body.appendChild(template);
 
   return 0;
 }
@@ -67,7 +72,8 @@ function lru() {
 
   for (var i = 0; i < no_of_pages; i++)
     pages[i] = parseInt(pages[i]);
-  document.write("Here is how the frames are going to be filled. NOTE: -1 represents an unallocated frame <br><br>");
+    var template = document.createElement('div');
+    var str = "<br><br><br>Here is how the frames are going to be filled. NOTE: -1 represents an unallocated frame <br><br>";
   for (var i = 0; i < no_of_pages; i++) {
     flag1 = flag2 = 0;
 
@@ -109,9 +115,12 @@ function lru() {
 
 
     }
-    document.write(frames + "<br>");
+    str += frames + "<br>";
   }
-  document.write("<br>Page faults = " + faults);
+  str += "<br>Page faults = " + faults;
+  template.innerHTML = str;
+  template.style.textAlign = "center";
+  document.body.appendChild(template);
 
   return 0;
 }
