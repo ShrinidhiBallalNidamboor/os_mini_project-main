@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -61,73 +61,33 @@
   
     <div class="row">
       <div class="col-sm-4">
-        <div class="card text-white bg-danger mb-3" style="max-width: 25rem; ">
-          <div class="card-header">FCFS</div>
+        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
+          <div class="card-header">Sequential</div>
           <div class="card-body">
-            <h4 class="card-title">First Come First Served</h4>
-            <p class="card-text">FCFS is the simplest scheduling algorithm where the process that requests the CPU first is allocated the CPU first. It is non-preemptive and is implemented with a <em>FIFO</em> queue.</p>
-            <a class="btn btn-primary" href="src/fcfs.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>
+            <h4 class="card-title">Sequential</h4>
+            <p class="card-text">Sequential blocks are allocated to the file.</p>
+            <a class="btn btn-primary" href="sequential.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>
           </div>
         </div>
       </div>
   
       <div class="col-sm-4">
         <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
-          <div class="card-header">SJF</div>
+          <div class="card-header ">Indexed</div>
           <div class="card-body">
-            <h4 class="card-title">Shortest Job First</h4>
-            <p class="card-text">SJF selects the waiting process with the <em>smallest execution time</em> to execute next (<em>non-preemptively</em>).</p>
-            <a class="btn btn-primary" href="src/sjf.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>
-          </div>
+            <h4 class="card-title">Indexed</h4>
+            <p class="card-text">Index file is maintained to track the loaction of the blocks of the file</p>
+            <a class="btn btn-primary" href="indexed.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>          </div>
         </div>
       </div>
   
       <div class="col-sm-4">
         <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
-          <div class="card-header">SRTF</div>
+          <div class="card-header">Linked</div>
           <div class="card-body">
-            <h4 class="card-title">Shortest Remaining Time First</h4>
-            <p class="card-text">SRTF is the <em>preemptive</em> version of <em>SJF</em> scheduling.</p>
-            <a class="btn btn-primary" href="src/srtf.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>
-          </div>
-        </div>
-      </div>
-  
-    </div>
-  
-    <div class="row">
-  
-  
-  
-      <div class="col-sm-4">
-        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
-          <div class="card-header">Priority</div>
-          <div class="card-body">
-            <h4 class="card-title">Priority Scheduling</h4>
-            <p class="card-text">Priority scheduling is a method of scheduling processes based on <em>priority</em>. Processes with equal priority are executed on FCFS basis. Both preemptive and non-preemptive versions exist.</p>
-            <a class="btn btn-primary" href="src/priority.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-sm-4">
-        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
-          <div class="card-header ">RR</div>
-          <div class="card-body">
-            <h4 class="card-title">Round Robin Scheduling</h4>
-            <p class="card-text">Round Robin Scheduling treats the ready queue as a <em>circular queue</em>. The CPU scheduler goes around the ready queue, allocating the CPU to each process for a fixed time interval called <em>time quantum</em>.</p>
-            <a class="btn btn-primary" href="src/rr.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>          </div>
-        </div>
-      </div>
-  
-      <div class="col-sm-4">
-        <div class="card text-white bg-danger mb-3" style="max-width: 25rem;">
-          <div class="card-header">MLQS</div>
-          <div class="card-body">
-            <h4 class="card-title">Multilevel Queue Scheduling</h4>
-            <p class="card-text">A multi-level queue scheduling algorithm divides the ready queue into several <em>separate queues</em> based on response-time requirements of the processes. The queues will be assigned different <em>priorities</em>
-              (processes in higher priority queues are executed first) and have their own <em>individual scheduling algorithms</em>.</p>
-              <a class="btn btn-primary" href="src/multilevelQueue.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>
+            <h4 class="card-title">Linked</h4>
+            <p class="card-text">Block value and pointers to the next block of the file are maintained in the sectors of the file.</p>
+              <a class="btn btn-primary" href="linked.html" role="button" style="background-color: rgb(61, 59, 59); color: aliceblue;">Simulate!</a>
           </div>
         </div>
       </div>
@@ -135,6 +95,4 @@
     </div>
   </div>
 </body>
-<script src='js/Simulation-1.js'></script>
-
 </html>
