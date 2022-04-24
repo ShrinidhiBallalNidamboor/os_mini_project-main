@@ -4,13 +4,13 @@
 <head>
 	<link href="css/css_prod_cons.css" rel="stylesheet" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Producer Consumer Problem</title>
+	<title>Process Synchronisation</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../Intro/css/bootswatch.css" />
-	<script type="text/javascript" src="../Intro/js/scrolloverflow.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootswatch.css" />
+	<script type="text/javascript" src="../js/scrolloverflow.js"></script>
 
-	<script type="text/javascript" src="../Intro/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -21,48 +21,59 @@
 			});
 		});
 	</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/bootswatch.css" />
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Operating System Mini Project By Group 420" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+
+  <!--Inter UI font-->
+  <link rel="stylesheet" href="../css/innerui.css">
+
+  <!--vendors styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+  <!-- Bootstrap CSS / Color Scheme -->
+  <link rel="stylesheet" href="../css/default.css" id="theme-color">
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-success">
-		<a class="navbar-brand" href="../Intro/home.html">Home</a>
-		<div class="collapse navbar-collapse" id="navbarColor01">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="../CPU_Scheduling/index.html">CPU Scheduling</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../Disk/disk_schedule.html">Disk Scheduling</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../Deadlock/index.html">Deadlock</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../File_System/index.html">File System</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../MFT/index.html">Fixed Partitioning(MFT)</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../MVT/index.html">Variable Partitioning(MVT)</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../Page/pg.html">Paging</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../Page/index.html">Page Replacement</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../Process_Synchronization/index.html">Process Synchronization</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<br>
+	<section>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand heading-black" href="../index.html">
+                OS Project
+            </a>
+                <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="grid"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="../index.html">Back</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+  </section>
+	<br><br>
 	<div id="fullpage">
 		<div class="section " id="section0">
 			<div class="container">
-				<div class="jumbotron">
+				<div class="jumbo">
 					<h1 class="display-3">Simulation of Producer-Consumer Problem</h1>
 					<p class="lead">A multi-process synchronization problem</p>
 					<hr class="my-4">
@@ -70,7 +81,7 @@
 						the buffer. A consumer tries to remove data from a filled slot in the buffer.</p>
 
 					<p class="lead">
-						<a class="btn btn-success" href="producer_consumer.html#anim" role="button">Play</a>
+						<a class="btn btn-primary" href="producer_consumer.html#anim" role="button">Play</a>
 					</p>
 				</div>
 				<br>
@@ -82,8 +93,8 @@
 				<input type="image" src="includes/play.png" class="play1" onclick="toggle1(this);" />
 				<img id="prod" src="includes/producer.png">
 				<img id="producer" src="includes/prod.png">
-				<div class="buffer">Buffer size : 8</div>
-				<div id="count">Counter : 0</div>
+				<div class="buffer" style="background-color: black;">Buffer size : 8</div>
+				<div id="count" style="background-color: black;">Counter : 0</div>
 				<input type="image" src="includes/play.png" class="play2" onclick="toggle2(this);" />
 				<img id="cons" src="includes/consumer.png">
 				<img id="consumer" src="includes/cons.png">
