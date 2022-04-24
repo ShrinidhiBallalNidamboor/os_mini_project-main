@@ -4975,8 +4975,9 @@ tbody.collapse.show {
 .jumbo {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #4E5D6C;
+  background-color: black;
   border-radius: 0;
+  font-size: 30px;
 }
 
 @media (min-width: 576px) {
