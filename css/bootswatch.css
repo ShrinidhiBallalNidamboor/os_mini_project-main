@@ -4534,6 +4534,7 @@ tbody.collapse.show {
   margin-bottom: 0;
   background-color: rgba(255, 255, 255, 0.075);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: green;
 }
 
 .card-header:first-child {
