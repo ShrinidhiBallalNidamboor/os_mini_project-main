@@ -4510,6 +4510,7 @@ tbody.collapse.show {
 
 .card-title {
   margin-bottom: 0.75rem;
+  color: green
 }
 
 .card-subtitle {
@@ -4978,7 +4979,7 @@ tbody.collapse.show {
   margin-bottom: 2rem;
   background-color: black;
   border-radius: 0;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 @media (min-width: 576px) {
